@@ -8,7 +8,5 @@ end
 len = File.stream!("2.input")
 |> Enum.map( fn(x) -> (String.split(x, "x") |> Enum.map(&Integer.parse/1) |> Ribbon.length) end)
 |> Enum.sum
-# len = String.split("1x1x10", "x") |> Enum.map(&Integer.parse/1) |> Ribbon.length
-
 
 IO.puts len
