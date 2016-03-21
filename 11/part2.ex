@@ -25,12 +25,11 @@ defmodule Password do
     def next_good(password) do
         next_password = next_string(password)
         if good?(next_password) do
-        next_password
-          else
+          next_password
+        else
           next_good(next_password)
-end
+        end
     end
-
 end
 
 File.read!("input.txt") |> Password.next_good |> Password.next_good |> IO.puts
